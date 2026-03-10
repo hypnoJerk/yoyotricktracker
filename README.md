@@ -62,14 +62,28 @@ npm run user:create your_username your_password
 
 ### 6. 🏃 Run the App
 
-**Development Mode:**
+#### Option A: Local Development (Requires Node/npm)
 ```bash
+# 1. Initialize Database
+npm run db:init
+
+# 2. Create Admin User
+npm run user:create your_username your_password
+
+# 3. Start Development Server
 npm run dev
 ```
 
-**Production (Docker):**
+#### Option B: Docker (No local Node/npm needed) 🐳
 ```bash
+# 1. Build and Start Containers
 docker-compose up --build -d
+
+# 2. Initialize Database (Inside Container)
+docker-compose run --rm app npm run db:init
+
+# 3. Create Admin User (Inside Container)
+docker-compose run --rm app npm run user:create your_username your_password
 ```
 
 ---
