@@ -45,13 +45,13 @@
     </section>
 
     <section class="gear">
-        <h2>Retro Item Shop</h2>
+        <h2>Item Shop</h2>
         <div class="gear-grid">
             <div class="gear-item">
                 <div class="icon">🪀</div>
                 <h3>Magicyoyo K2</h3>
-                <p>Perfect for beginners. Crystal clear and responsive.</p>
-                <a href="#" class="buy-btn">Buy for $12.99</a>
+                <p>With the MAGICYOYO K2 Crystal, you’re not just buying a yo-yo—you’re embarking on a journey.</p>
+                <a href="https://www.amazon.com/MAGICYOYO-Professional-Replacement-Unresponsive-Intermediate/dp/B0C5DQPHJ4/ref=sr_1_1_sspa?crid=2N9XCXYWU7BIA&dib=eyJ2IjoiMSJ9.7iBz8hMYO8nupArBAwbV5I5j9QFVVp6X0dqOPG9L3BGF7aD-3EhTw2-nFELHEHOScf3C5-_Ye-e12WGEay3RyPfnrYgyZgqs1vUwzim4z26FUXCxZ0RZrvKeH-TKeKTASuWkSI_p1huZFqeJQFl26D1RRf9LsNXJxfS19vy47YfejpBYzlKu8il0m07eXDo4rm9gNX0J2lsFZ_uKpYt-jk1pp6VvQmLfN2NSUOC7j_SX-cdYkML6C0Cvkd3OAbWeDnsekQpjD32EK8RllzIzucLhkvBUM8gS_5Z6IUsBaGA.znogBi4bGtTa8SoU_5lUD0Iqk-lK148dC9VeBCQSl9o&dib_tag=se&keywords=k2%2Bkrystal%2Byoyo&qid=1773263688&sprefix=krystal%2Bk2%2Caps%2C190&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" target="_blank" class="buy-btn">Buy for ~$15.99</a>
             </div>
             <div class="gear-item">
                 <div class="icon">✨</div>
