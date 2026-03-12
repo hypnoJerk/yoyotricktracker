@@ -20,6 +20,7 @@ export async function POST({ request, locals }) {
         return json({ success: true });
     } catch (err) {
         console.error('Error updating progress:', err);
-        return json({ message: err.message }, { status: 500 });
+        const message = err instanceof Error ? err.message : String(err);
+        return json({ message }, { status: 500 });
     }
 }
