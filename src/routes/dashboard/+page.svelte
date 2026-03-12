@@ -13,11 +13,11 @@
 <style>
     .instructions {
         margin-top: 40px;
-        background: #f9f9f9;
+        background: var(--card-bg);
         padding: 20px;
         border-radius: 8px;
     }
     h1 {
-        color: #333;
+        color: var(--text-color);
     }
 </style>

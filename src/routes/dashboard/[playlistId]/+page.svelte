@@ -67,13 +67,13 @@
     .progress-bar-bg {
         width: 100%;
         height: 10px;
-        background: #eee;
+        background: var(--progress-bg);
         border-radius: 5px;
         overflow: hidden;
     }
     .progress-bar-fill {
         height: 100%;
-        background: #4caf50;
+        background: var(--accent);
         transition: width 0.3s ease;
     }
     .video-list {
@@ -86,14 +86,14 @@
         align-items: center;
         gap: 15px;
         padding: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid var(--border-color);
         border-radius: 8px;
-        background: white;
+        background: var(--card-bg);
         transition: background 0.3s;
     }
     .video-card.learned {
-        background: #e8f5e9;
-        opacity: 0.8;
+        background: var(--card-learned-bg);
+        opacity: 0.9;
     }
     .checkbox-container input {
         width: 24px;
@@ -106,7 +106,7 @@
     }
     .info a {
         font-weight: bold;
-        color: #333;
+        color: var(--text-color);
         text-decoration: none;
     }
     .info a:hover {
