@@ -1,5 +1,5 @@
-<script>
-    let { form } = $props();
+<script lang="ts">
+    export let form;
 </script>
 
 <div class="login-container">

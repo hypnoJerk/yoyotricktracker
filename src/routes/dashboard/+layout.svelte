@@ -1,6 +1,16 @@
-<script>
-    let { data, children } = $props();
-    let playlistUrl = $state('');
+<script lang="ts">
+    export let data: {
+        user?: { id: number; username: string };
+        playlists: Array<{
+            id: number;
+            youtube_playlist_id: string;
+            name: string;
+            learned_count: number;
+            total_count: number;
+        }>;
+    };
+
+    let playlistUrl = '';
 
     async function addPlaylist() {
         if (!playlistUrl) return;
@@ -26,7 +36,7 @@
         <h2>Playlists</h2>
         <div class="add-playlist">
             <input type="text" bind:value={playlistUrl} placeholder="YouTube Playlist URL" />
-            <button onclick={addPlaylist}>Add Playlist</button>
+            <button on:click={addPlaylist}>Add Playlist</button>
         </div>
         <nav>
             <ul>
@@ -41,14 +51,18 @@
             </ul>
         </nav>
         <div class="user-info">
-            Logged in as {data.user.username}
-            <form action="/logout" method="POST">
-                <button type="submit">Logout</button>
-            </form>
+            {#if data.user}
+                Logged in as {data.user.username}
+                <form action="/logout" method="POST">
+                    <button type="submit">Logout</button>
+                </form>
+            {:else}
+                <a href="/login">Log in</a>
+            {/if}
         </div>
     </aside>
     <main class="content">
-        {@render children()}
+        <slot />
     </main>
 </div>
 

@@ -1,6 +1,6 @@
-<script>
-    let { data } = $props();
-    const { stats, playlists } = data;
+<script lang="ts">
+    export let data;
+    const { stats, playlists = [] } = data;
     const overallPercent = stats.total_videos > 0 ? (stats.total_learned / stats.total_videos) * 100 : 0;
 </script>
 
@@ -30,7 +30,7 @@
 
         <div class="playlist-progress">
             <h3>Playlists</h3>
-            {#each playlists as playlist}
+            {#each playlists as playlist (playlist.id)}
                 <div class="playlist-bar">
                     <div class="playlist-info">
                         <span>{playlist.name}</span>

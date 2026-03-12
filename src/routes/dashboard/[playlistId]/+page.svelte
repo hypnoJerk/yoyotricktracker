@@ -1,14 +1,25 @@
-<script>
-    let { data } = $props();
-    let videos = $state(data.videos);
+<script lang="ts">
+    export let data: {
+        playlist: { id: number; name: string; youtube_playlist_id?: string };
+        videos: Array<{
+            id: number;
+            video_id: string;
+            title: string;
+            thumbnail_url: string;
+            position: number;
+            learned: boolean;
+        }>;
+    };
 
-    const learnedCount = $derived(videos.filter(v => v.learned).length);
-    const totalCount = $derived(videos.length);
-    const progressPercent = $derived(totalCount > 0 ? (learnedCount / totalCount) * 100 : 0);
+    let videos = data.videos;
 
-    async function toggleLearned(video) {
+    $: learnedCount = videos.filter(v => v.learned).length;
+    $: totalCount = videos.length;
+    $: progressPercent = totalCount > 0 ? (learnedCount / totalCount) * 100 : 0;
+
+    async function toggleLearned(video: { id: number; learned: boolean }) {
         const newStatus = !video.learned;
-        
+
         const res = await fetch('/api/progress', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -37,13 +48,13 @@
     {#each videos as video}
         <div class="video-card {video.learned ? 'learned' : ''}">
             <div class="checkbox-container">
-                <input type="checkbox" checked={video.learned} onchange={() => toggleLearned(video)} />
+                <input type="checkbox" checked={video.learned} on:change={() => toggleLearned(video)} />
             </div>
             <div class="thumbnail">
                 <img src={video.thumbnail_url} alt={video.title} />
             </div>
             <div class="info">
-                <a href="https://youtube.com/watch?v={video.video_id}" target="_blank">{video.title}</a>
+                <a href="https://youtube.com/watch?v={video.video_id}" target="_blank" rel="noreferrer">{video.title}</a>
             </div>
         </div>
     {/each}
