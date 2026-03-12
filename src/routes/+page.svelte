@@ -57,7 +57,7 @@
                 <div class="icon">✨</div>
                 <h3>YoYoFactory Replay Pro</h3>
                 <p>The champion's choice for unresponsive play.</p>
-                <a href="#" class="buy-btn">Buy for $15.99</a>
+                <a href="https://www.amazon.com/MAGICYOYO-V12-Professional-Responsive-Unresponsive/dp/B0D66VHBKV/ref=sr_1_8?dib=eyJ2IjoiMSJ9.Vf6XwqahHD1zt_bMVWgDS_KI9ZXEDMVxmgmhNaUrS-WnSel8OIXevbeM5_-Lh0zLiG9Wb0xB983v7jUGOaGbxzh34xKGEhQJH2-3cy3lhKWHbPz_MLvYzKiu3kKwbYqHOQ5ckH_-eFI2ZYzbRwSEocHTJbGeC483JAvWltaun_Q25u244Adwi_x32It5ob7IGIeCg7jJx4T0L2tupI-ONiFNhWyIGRQN80PyTwpTZi529_DQ6zL08OCcgEJDlAnjDdddzcp22_MGFRNIUuUHweNF0nChaWpH2zYM07tiDh4.pnEoWZKw91PRxum6LyRJdl_-7O8Vn59KCrSa31A4BT4&dib_tag=se&keywords=magicyoyo%2Bunresponsive&qid=1773350227&sr=8-8&th=1" target="_blank" class="buy-btn">Buy for ~$22.55</a>
             </div>
         </div>
     </section>
